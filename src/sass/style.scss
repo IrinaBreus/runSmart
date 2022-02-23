@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Museo Sans Cyrl', sans-serif;
+}
+p {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 42px;
+    text-align: right;
+
+}
+
+@import 'base/*.scss';
+@import 'blocks/*.scss';
