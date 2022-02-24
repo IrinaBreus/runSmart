@@ -16,3 +16,19 @@
         margin-top: 68px;
     }
 }
+
+@media (max-width: 768px) {
+    .button_main {
+        width: 280px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .button_main {
+        width: 220px;
+        height: 40px;
+        font-size: 14px;
+        margin-top: 40px;
+    }
+}
