@@ -1,0 +1,39 @@
+.consultation {
+    min-height: 680px;
+    padding: 100px 105px 92px 105px;
+    background-image: url('../img/bg2.jpg') center center/cover no-repeat;
+    &__descr {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+        margin-top: 36px;
+    }
+}
+
+@media (max-width: 992px) {
+    .consultation {
+        &__descr {
+        font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .consultation {
+        min-height: 600px;
+        padding: 100px 0 80px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .consultation {
+        &__descr {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #FFFFFF;
+            margin-top: 28px;
+        }
+    }
+}
