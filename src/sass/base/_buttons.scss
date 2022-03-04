@@ -9,11 +9,23 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: all 0.7s;
+    &:hover {
+        background: #FFFFFF;
+        color: #C70101;
+        box-shadow: 3px 3px 20px #C70101;
+    }
     &_main {
         width: 300px;
         height: 50px;
         font-size: 16px;
         margin-top: 68px;
+    }
+    &_catalog {
+        width: 131px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 17px;
     }
 }
 

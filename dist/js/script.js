@@ -16,7 +16,17 @@
   \************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/js/modules/slider.js\");\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    'use strict';\r\n\r\n    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n})\n\n//# sourceURL=webpack://gulp-start/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/js/modules/slider.js\");\n/* harmony import */ var _modules_cart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cart */ \"./src/js/modules/cart.js\");\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    'use strict';\r\n\r\n    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    (0,_modules_cart__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n})\n\n//# sourceURL=webpack://gulp-start/./src/js/main.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/cart.js":
+/*!********************************!*\
+  !*** ./src/js/modules/cart.js ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\nconst cart = () => {\r\n    let btnMore = document.querySelectorAll('#more'),\r\n        btnBack = document.querySelectorAll('#back'),\r\n        blockMain = document.querySelectorAll('.catalog-item__main'),\r\n        blockMore = document.querySelectorAll('.catalog-item__more');\r\n    \r\n    blockMore.forEach(item => {\r\n        item.style.display = 'none';\r\n    })\r\n\r\n    btnMore.forEach(btn => {\r\n        btn.addEventListener('click', function (e) {\r\n            e.preventDefault();\r\n            this.parentElement.style.display = 'none';\r\n            this.parentElement.nextElementSibling.style.display = '';\r\n        });\r\n    });\r\n\r\n    btnBack.forEach(btn => {\r\n        btn.addEventListener('click', function (e) {\r\n            e.preventDefault();\r\n            this.parentElement.style.display = 'none';\r\n            this.parentElement.previousElementSibling.style.display = '';\r\n        });\r\n    });\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (cart);\n\n//# sourceURL=webpack://gulp-start/./src/js/modules/cart.js?");
 
 /***/ }),
 
