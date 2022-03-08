@@ -47,31 +47,31 @@
         opacity: 0.7;
     }
     
-    .slideFromLeft {
-        animation: slideFromLeft 0.5s forwards;
-    }
+    // .slideFromLeft {
+    //     animation: slideFromLeft 0.5s forwards;
+    // }
     
-    @keyframes slideFromLeft {
-        from {
-            transform: translateX(-100%);
-        }
-        to {
-            transform: translateX(0);
-        }
-    }
+    // @keyframes slideFromLeft {
+    //     from {
+    //         transform: translateX(-100%);
+    //     }
+    //     to {
+    //         transform: translateX(0);
+    //     }
+    // }
     
-    .slideFromRight {
-        animation: slideFromRight 0.5s forwards;
-    }
+    // .slideFromRight {
+    //     animation: slideFromRight 0.5s forwards;
+    // }
     
-    @keyframes slideFromRight {
-        from {
-            transform: translateX(100%);
-        }
-        to {
-            transform: translateX(0);
-        }
-    }
+    // @keyframes slideFromRight {
+    //     from {
+    //         transform: translateX(100%);
+    //     }
+    //     to {
+    //         transform: translateX(0);
+    //     }
+    // }
 
     
 }
