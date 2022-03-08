@@ -107,6 +107,11 @@
 
 @media (max-width: 576px) {
     .carousel {
+        .dots {
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+        }
         .dot {
             margin: 0 7px;
         }
