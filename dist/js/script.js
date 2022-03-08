@@ -16,7 +16,7 @@
   \************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/js/modules/slider.js\");\n/* harmony import */ var _modules_cart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cart */ \"./src/js/modules/cart.js\");\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    'use strict';\r\n\r\n    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    (0,_modules_cart__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n})\n\n//# sourceURL=webpack://gulp-start/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/js/modules/slider.js\");\n/* harmony import */ var _modules_cart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cart */ \"./src/js/modules/cart.js\");\n/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/tabs */ \"./src/js/modules/tabs.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    'use strict';\r\n\r\n    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    (0,_modules_cart__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n})\n\n//# sourceURL=webpack://gulp-start/./src/js/main.js?");
 
 /***/ }),
 
@@ -37,6 +37,16 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst cart = () => {\r\n    l
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 eval("__webpack_require__.r(__webpack_exports__);\nconst slider = () => {\r\n    let slides = document.querySelectorAll('.slide'),\r\n        dots = document.querySelectorAll('.dot'),\r\n        btnNext = document.querySelector('.carousel__arrow_right'),\r\n        btnPrev = document.querySelector('.carousel__arrow_left');\r\n\r\n    let index = 0;\r\n\r\n    showSlide(index);\r\n\r\n    btnNext.addEventListener('click', () => {\r\n        index == slides.length - 1 ? index = 0 : index++;\r\n        showSlide(index);\r\n        addClass('slideFromLeft', 'slideFromRight');\r\n    });\r\n\r\n    btnPrev.addEventListener('click', () => {\r\n        index == 0 ? index = slides.length - 1 : index--;\r\n        showSlide(index);\r\n        addClass('slideFromRight', 'slideFromLeft');\r\n    });\r\n\r\n    dots.forEach((dot, i) => {\r\n        dot.addEventListener('click', (e) => {\r\n            showSlide(i);\r\n            dotsStyle(index);\r\n            e.target.style.opacity = '1';\r\n        })\r\n    })\r\n\r\n    function dotsStyle(index) {\r\n        dots.forEach(dot => dot.style.opacity = '0.7');\r\n        dots[index].style.opasity = '1';\r\n    }\r\n\r\n    function addClass(removeClass, addClass) {\r\n        slides[index].classList.add(addClass);\r\n        slides[index].classList.remove(removeClass);\r\n    }\r\n\r\n    function showSlide(index) {\r\n        slides.forEach(slide => slide.style.display = 'none');\r\n        slides[index].style.display = '';\r\n    }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (slider);\n\n//# sourceURL=webpack://gulp-start/./src/js/modules/slider.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/tabs.js":
+/*!********************************!*\
+  !*** ./src/js/modules/tabs.js ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\nconst tabs = () => {\r\n    let tabs = document.querySelectorAll('.catalog__tab');\r\n    let content = document.querySelectorAll('.catalog__content');\r\n\r\n    showTabs(); \r\n    tabs.forEach((tab, i) => {\r\n        tab.addEventListener('click', function() {\r\n            showTabs(i);\r\n        })\r\n    })\r\n\r\n    function showTabs(n = 0) {\r\n        tabs.forEach(tab => tab.classList.remove('catalog__tab_active'));\r\n        content.forEach(elem => elem.style.display = 'none');\r\n        tabs[n].classList.add('catalog__tab_active');\r\n        content[n].style.display = '';\r\n    }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (tabs);\n\n//# sourceURL=webpack://gulp-start/./src/js/modules/tabs.js?");
 
 /***/ })
 
