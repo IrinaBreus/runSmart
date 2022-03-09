@@ -1,0 +1,117 @@
+.comment {
+    padding-bottom: 94px;
+    &__wrapper {
+        max-width: 915px;
+        margin: 0 auto;
+        margin-top: 60px;
+        .comment-block {
+            display: flex;
+            justify-content: space-between;
+            &:not(:last-child) {
+                margin-bottom: 80px;
+            }
+            &__img {
+                width: 169px;
+                height: 169px;
+                margin-right: 61px;
+                img {
+                    width: 100%;
+                }
+            }
+            &__descr {
+                max-width: 680px;
+            }
+            &__title {
+                font-weight: 600;
+                font-size: 18px;
+                color: #0D0D0D;
+            }
+            &__subtitle {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                color: #646464;
+                margin-top: 6px;
+            }
+            &__txt {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                color: #0D0D0D;
+                margin-top: 16px;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .comment {
+        &__wrapper {
+            max-width: 100%;
+            .comment-block {
+                &__img {
+                    margin-right: 40px;
+                }
+                &__descr {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .comment {
+        padding-bottom: 64px;
+        &__wrapper {
+            margin-top: 40px;
+            .comment-block {
+                &:not(:last-child) {
+                    margin-bottom: 60px;
+                }
+                &__img {
+                    width: 100px;
+                    height: 100px;
+                    margin-right: 30px;
+                }
+                &__txt {
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #0D0D0D;
+                    margin-top: 16px;
+                }
+    
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .comment {
+        &__wrapper {
+            .comment-block {
+                display: flex;
+                flex-direction: column;
+                &__img {
+                    width: 140px;
+                    height: 140px;
+                    display: block;
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                }
+                &__title {
+                    text-align: center;
+                }
+                &__subtitle {
+                    text-align: center;
+                }
+                &__txt {
+                    font-size: 14px;
+                }
+    
+            }
+        }
+    }
+}
