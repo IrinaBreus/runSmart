@@ -12,6 +12,7 @@ const cart = () => {
             e.preventDefault();
             this.parentElement.style.display = 'none';
             this.parentElement.nextElementSibling.style.display = '';
+            this.parentElement.nextElementSibling.classList.add('slideFromRight');
         });
     });
 
@@ -20,6 +21,7 @@ const cart = () => {
             e.preventDefault();
             this.parentElement.style.display = 'none';
             this.parentElement.previousElementSibling.style.display = '';
+            this.parentElement.previousElementSibling.classList.add('slideFromLeft');
         });
     });
 }

@@ -49,19 +49,20 @@
     }
     &-item {
         position: relative;
+        width: 304px;
         min-height: 442px;
         border: 2px solid #E8E8E8;
         box-sizing: border-box;
         padding: 21px;
         overflow: hidden;
         &__main {
+            width: 100%;
             min-height: 340px;
-            animation: slideFromLeft 0.5s forwards;
         }
         &__more {
+            width: 100%;
             min-height: 320px;
             position: relative;
-            animation: slideFromRight 0.5s forwards;
         }
         &__img {
             display: block;
@@ -146,6 +147,10 @@
         }
     }
     
+    .slideFromLeft {
+        animation: slideFromLeft 0.5s forwards;
+    }
+    
     @keyframes slideFromLeft {
         from {
             transform: translateX(-100%);
@@ -155,6 +160,9 @@
         }
     }
     
+    .slideFromRight {
+        animation: slideFromRight 0.5s forwards;
+    }
     @keyframes slideFromRight {
         from {
             transform: translateX(100%);
