@@ -1,6 +1,6 @@
 const cart = () => {
-    let btnMore = document.querySelectorAll('#more'),
-        btnBack = document.querySelectorAll('#back'),
+    let btnMore = document.querySelectorAll('.more'),
+        btnBack = document.querySelectorAll('.back'),
         blockMore = document.querySelectorAll('.catalog-item__more');
     
     blockMore.forEach(item => {
