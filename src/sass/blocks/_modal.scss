@@ -1,0 +1,53 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.5s;
+    .modal {
+        position: absolute;
+        width: 382px;
+        padding: 35px 25px 40px 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #F2F2F2;
+        &__close {
+            position: absolute;
+            top: 0;
+            right: -40px;
+            font-size: 50px;
+            line-height: 20px;
+            color: #C70101;
+            cursor: pointer;
+        }
+        &__title {
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 18px;
+            text-align: center;
+            color: #0D0D0D;
+        }
+        &__subtitle {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            margin-top: 12px;
+        }
+    }
+    #consultation, #order, #thanks {
+        display: none;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}

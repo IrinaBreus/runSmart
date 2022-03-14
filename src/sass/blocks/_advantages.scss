@@ -12,6 +12,12 @@
     &__img {
         display: block;
         margin: 0 auto;
+        &_animate {
+            animation: elemScale 1.5s ease-in infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
     }
     &__subtitle {
         font-weight: 600;
